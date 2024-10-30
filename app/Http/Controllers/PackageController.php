@@ -21,7 +21,7 @@ class PackageController extends Controller
         try {
             // Validate the incoming request
             $validated = $request->validate([
-                'budget' => 'required|numeric|min:1',
+                'budget' => 'required|numeric|min:0',
                 'essential_items' => 'required|array|min:1',
                 'essential_items.*' => 'string',
                 'preferences.style' => 'nullable|string',
