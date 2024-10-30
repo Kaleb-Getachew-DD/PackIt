@@ -59,8 +59,8 @@ class PackageGeneratorService
                 if ($product->name === $essential && !in_array($product->name, $this->allUsedProducts)) {
                     $matches = 0;
                     if ($product->style === $userPreferences['style']) $matches++;
-                    if (in_array($product->material, explode(', ', $userPreferences['material']))) $matches++;
-                    if (in_array($product->color_palette, explode(', ', $userPreferences['color_palette']))) $matches++;
+                    if (in_array($product->material,  $userPreferences['material'])) $matches++;
+                    if (in_array($product->color_palette, $userPreferences['color_palette'])) $matches++;
                     if ($product->quality === $userPreferences['quality']) $matches++;
 
                     $matchingProducts[] = ['product' => $product, 'matches' => $matches];
@@ -112,8 +112,8 @@ class PackageGeneratorService
         foreach ($package as $product) {
             $matches = 0;
             if ($product->style === $userPreferences['style']) $matches++;
-            if (in_array($product->material, explode(', ', $userPreferences['material']))) $matches++;
-            if (in_array($product->color_palette, explode(', ', $userPreferences['color_palette']))) $matches++;
+            if (in_array($product->material,  $userPreferences['material'])) $matches++;
+            if (in_array($product->color_palette, $userPreferences['color_palette'])) $matches++;
             if ($product->quality === $userPreferences['quality']) $matches++;
 
             $totalMatches += $matches;
