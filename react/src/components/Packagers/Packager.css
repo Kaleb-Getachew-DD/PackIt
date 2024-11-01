@@ -74,3 +74,101 @@ select {
 .Kgenerate-button:hover {
   background-color: #5e0e9b;
 }
+/* Popup css */
+/* Packager.css */
+.Kpopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.Kpopup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.Kproduct-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.Kproduct-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.Kproduct-image {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.Kproduct-name {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.Kproduct-style, .product-price {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.Kadd-to-cart {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.Kclose-top-button {
+    position: absolute;
+    top: 10px; /* Adjust spacing as needed */
+    right: 15px; /* Adjust spacing as needed */
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.Kclose-top-button:hover {
+    color: #ff0000; /* Optional: hover effect for close button */
+}
+/* Styles for the bottom "Close" button */
+.Kpopup-content button {
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px; /* Adds space above the button */
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect for the bottom "Close" button */
+.Kpopup-content button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
